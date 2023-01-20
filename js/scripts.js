@@ -1,6 +1,6 @@
 //business logic
 function beepBoop(number) {
-  let number = [];
+  let numbers = [];
 
   for (let i = 0; i <= number; i++) {
     if (i.toString().includes(1) && !i.toString(2) && !i.toString(3)) {
@@ -19,20 +19,27 @@ function beepBoop(number) {
   return numbers;
 }
 
+function beepBoopReverse(n) {
+  const numbers = beepBoop(n);
+  const reverseNumbers = numbers.reverse();
+  return reverseNumbers;
+}
+
 // ui logic
-window.onload = function() {
-  document.querySelector("number-form").onsubmit = function(event) {
+window.addEventListener("load", function() {
+  document.getElementsById("number-form").addEventListener("submit", submitForm);
+  this.document.getElementById("reset").addEventListener("click", clearScreen);
+});
+
+  function submitForm(event) {
     event.preventDefault();
-    const div = document.getElementById("u-array");
-    const number1 = document.getElementById("number1").ariaValueMax;
+    const number1 = document.getElementById("number1").value;
     let p = document.createElement("display-array");
-    let numberArray = beepBoop(number1)
-    p.innerText = numberArray.join(", ");
+    let numberArray = beepBoop(number1);
   };
 
   function reset() {
-    document.getElementById("number-form").reset();
     const p = document.getElementById("display-array");
     p.innerText = "";
+    document.getElementById("number-form").reset();
   }
-}
