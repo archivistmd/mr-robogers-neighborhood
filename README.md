@@ -31,6 +31,14 @@ Test: It will replace 1, in a single-digit array with the string "Beep!"
 Code: beepBoop(4);
 Expected Output: [0, "Beep!", 2, 3, 4]
 
+Test: It will replace 2 in a single-digit array, with the string "Boop!" as well.
+Code: beepBoop(4);
+Expected Output [0, "Beep!", "Boop!", 3, 4]
+
+Test: It will replace 3 "won't you be my neighbor?"
+Code: beepBoop(4);
+Expected Output: [0, "Beep!", "Boop!", "Won't you be my neighbor?", 4]
+
 ## Known Bugs
 
 * No known bugs at the moment
