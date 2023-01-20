@@ -1,0 +1,29 @@
+body {
+  background-color: rgb(186, 186, 186);
+}
+
+#instructions {
+  text-align: center;
+  font-size: 18px;
+  color: rgb(29, 87, 87);
+}
+
+#number-form {
+  text-align: center;
+}
+
+#submit {
+  background-color: darkgrey;
+  color: darkblue;
+  display: block;
+  margin: auto;
+  font-family: serif;
+}
+
+#reset {
+  background-color: rgb(201, 159, 55);
+  color: cornsilk;
+  display: block;
+  margin: auto;
+  font-family: serif;
+}
