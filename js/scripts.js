@@ -14,27 +14,32 @@ function beepBoop(number) {
       numbers.push(i);
     } else {
       numbers.push(i);
-    };
-  }
-  return numbers;
+    }
+  } return numbers;
 }
 
 // ui logic
+function getResults (event) {
+  event.preventDefault();
+
+  const number1 = document.getElementById("number1").value;
+  const p = document.getElementById("array-display");
+  const numbersArray = beepBoop(number1);
+  p.innerText = numbersArray.join(", ");
+};
+
+function reset(event) {
+  event.preventDefault();
+
+  document.getElementById("number-form").reset();
+  const p = document.getElementById("array-display");
+  p.innerText ="";
+}
+
 window.addEventListener("load", function() {
-  document.getElementById("number-form").addEventListener("submit", submitForm);
-  document.getElementById("reset").addEventListener("click", resetScreen)
+  let form = document.querySelector("number-form");
+  number-form.addEventListener("submit", getResults);
+
+  let reset = document.querySelector("button#reset");
+  document.addEventListener("click", resetScreen);
 });
-
-  function handleFormSubmission(event) {
-    event.preventDefault();
-    const number1 = document.getElementById("number1").value;
-    const  p = document.getElementById("array-display");
-    let numbersArray = beepBoop(number1);
-    p.innerText = numbersArray.join(", ");
-  };
-
-  function reset() {
-    document.getElementById("number-form").reset();
-    const p = document.getElementById("array-display");
-    p.innerText ="";
-  }
