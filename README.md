@@ -13,7 +13,7 @@
 
 ## Setup/Installation Requirements
 
-* The portfolio can be viewed at the coresponding (GitHub Pages)[https://archivistmd.github.io/].
+* The portfolio can be viewed at the coresponding [GitHub Pages](https://archivistmd.github.io/mr-robogers-neighborhood).
 
 Or you may clone the project to your desktop by using the following command:
 
@@ -41,7 +41,7 @@ Expected Output: [0, "Beep!", "Boop!", "Won't you be my neighbor?", 4]
 
 ## Known Bugs
 
-* No known bugs at the moment
+* Results not showing
 
 ## License
 

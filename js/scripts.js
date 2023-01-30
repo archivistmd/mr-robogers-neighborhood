@@ -3,10 +3,10 @@ function beepBoop(number) {
   let numbers = [];
 
   for (let i = 0; i <= number; i++) {
-    if (i.toString().includes(1) && !i.toString(2) && !i.toString(3)) {
+    if (i.toString().includes(1)) {
       let i = "Beep!";
       numbers.push(i);
-    } else if (i.toString().includes(2) && !i.toString(3)) {
+    } else if (i.toString().includes(2)) {
       let i = "Boop!";
       numbers.push(i);
     } else if (i.toString().includes(3)) {
@@ -19,27 +19,22 @@ function beepBoop(number) {
   return numbers;
 }
 
-function beepBoopReverse(n) {
-  const numbers = beepBoop(n);
-  const reverseNumbers = numbers.reverse();
-  return reverseNumbers;
-}
-
 // ui logic
 window.addEventListener("load", function() {
-  document.getElementsById("number-form").addEventListener("submit", submitForm);
-  this.document.getElementById("reset").addEventListener("click", clearScreen);
+  document.getElementById("number-form").addEventListener("submit", submitForm);
+  document.getElementById("reset").addEventListener("click", resetScreen)
 });
 
-  function submitForm(event) {
+  function handleFormSubmission(event) {
     event.preventDefault();
     const number1 = document.getElementById("number1").value;
-    let p = document.createElement("display-array");
-    let numberArray = beepBoop(number1);
+    const  p = document.getElementById("array-display");
+    let numbersArray = beepBoop(number1);
+    p.innerText = numbersArray.join(", ");
   };
 
   function reset() {
-    const p = document.getElementById("display-array");
-    p.innerText = "";
     document.getElementById("number-form").reset();
+    const p = document.getElementById("array-display");
+    p.innerText ="";
   }
